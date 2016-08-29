@@ -1,0 +1,28 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+<style>
+.error {color: #FF0000;}
+</style>
+</head>
+<body> 
+<? php
+// This is to collect box array value as global_variables is set off in PHP5 by default
+$box=$_POST['box'];
+while (list ($key,$val) = @each ($box)) {
+echo "$val,";
+}
+?>
+<form method=post action='my_validation_form.php'>
+<input type=checkbox name=box[] value='Teacher'>
+&nbsp;John
+<input type=checkbox name=box[] value='Programmer'>
+&nbsp;Mike
+<input type=checkbox name=box[] value='Student'>
+&nbsp;Rone
+
+
+<input type=submit 
+value=Select></form>
+</body>
+</html>
