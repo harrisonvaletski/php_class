@@ -1,0 +1,48 @@
+Why must an html form that gets submitted to a php script be loaded through a url? what would happen upon submitting the form if it were not loaded though a url?
+
+Because php scripts need to be parsed by the server you must access them via a url. you cannot simply open them in your web browser as you would a file in other applications.
+
+why are textual form elements validated using empty() but other form elements are validated using isset()?
+
+if the string is tested with isset() and is false zero or empty but not null it will return true so this can be confusing. the empty() function will check if there is an empty value such as zero null or false.
+
+what is the difference between an indexed array and an associative array?
+
+Indexed use numbers as the keys, associative arrays use strings as keys.
+
+what are the superglobal arrays? From where do the following superglobals get their values?
+
+these arrays are available for all scopes of the script.
+$_GET		where php stores all values sent via the get method.
+$_POST		Stores all of the data sent from a html form that uses the post method.
+$_COOKIE	store data in the browser	
+$_REQUEST	shows information about get post and cookie method
+$_SESSION	store data on the server
+$_SERVER	stores information about the server php is running on.
+$_ENV		an array of variables passed by the environment method
+
+generally speaking when would you use a while loop? when would you use a for loop? when would you use a foreach loop? what is the syntax of each loop type?
+
+when retreiving results from a database or doing something an unknown number of times.while(condition){ //do something} doing something a known number of times. for(initial expression; condition expression){ //do something.} foreach ($array as $value) { //do something with value.} to access arrays.
+
+what version of php are you using? if you dont know find out now.
+
+5.3.1
+
+rewrite the gender conditional in handle_form.php (script 2.4) as one conditional instead of two nested ones. hint you'll need to use the and operator.
+
+awkward!
+
+rewrite handle_form.php(script 2.4) to use $_POST instead of $_REQUEST
+
+oh my gosh at first i thought it was for the 2.5 version and then i was like "oh, alright!" but then i was like wow, okay so is that it?
+
+Rewrite the echo statement in the final version of handle_form.php (Script 2.5) so that it uses single quotation marks and concatenation instead of double quotation marks.
+
+Really? whitespaces and concatenating?
+
+look up in the php manual one of the array functions introduced in this book. then check out some of the other array related functions built into the language.
+
+so it seems like the larry ullman book is pretty good at differentiating between ones we'll really using. I found some online but i dont really follow how to use this convention. http://www.php.net/manual/en/function.array.php
+
+create a form that contains a select menu or series of check boxes that allow for multiple sections. then in handling the php script display the selected items along with a count of how many the user selected.
