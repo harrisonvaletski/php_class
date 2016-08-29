@@ -1,0 +1,95 @@
+what is an absolute path? what is a relative path?
+
+an absolute path is a specific location you can put in the search or address bar to find a file. and a relative path uses dot notation to denote where the file is in relation to another more accessible location.
+
+what is the difference between include() and require()?
+
+the difference is that a warning will be printed to the web browser but the script used in the include() function will continue to run, whereas a script run with require() function that is not found or does not work will halt.
+
+what is the difference between include() and include_once()? which function should you generally avoid using and why?
+
+the *_once() version gaurantees that the file in question is included only once regardless of how many times a script may (presumably inadvertantly) attempt to include it, so it should be implemented for redundancy checking in complex applications but not necessarily for simple sites.
+
+why does it not matter what extension is used for an included file?
+
+the function treats included files as html unless it contains code within the PHP tags.
+
+what is the signicance of the $_SERVER['REQUEST_METHOD'] value?
+
+it is the returned value indicating which request method was used to access the page; i.e. 'GET', 'HEAD', 'POST', 'PUT'.
+
+what is the syntax for defining a function that takes arguments with default values? How do default values impact how te function can be called?
+
+function this($name, $greeting = 'Bonjour'){ echo "$greeting, $name!";}
+makes the arguement optional when calling the function. If a value is passed, the value is used; otherwise the default is.
+
+Create a new html template for the pages in this chapter. Use that new template as the basis for new header and footer files. By doing so, you should be able to change the look of the entire site without modifying any of the php scripts.
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd><html xmlns="http://www.w3.org/1999/xhtml"><head><title><?php echo $page_title; ?></title><link rel="stylesheet" href="includes/style.css" type="text/css" media="screen"/><meta http-equiv="content-type"content="text/html; charset=utf-8" /></head><body> <div id="header"><h1>your website</h1><h2>catchy slogan</h2></div><div id ="navigation"<ul><li><a href="index.php">Home page</a></li><li><a href="index.php">Home page</a></li><li><a href="index.php">Home page</a></li><li><a href="index.php">Home page</a></li></ul></div><div id="content"><!—Start of the Page-specific content. -- > <! – script 3.2 –header.html -- >
+
+
+<! – script 3.3 – footer.html -- > <! - - end of the page specific content. - -> </div><div id="footer"><p>Copyright &copy; <a href="#"> Plain and simple</a> 2014 | Designed by <a href="http://hvaletski.wordpress.com/">Harrison Valetski</a> sponsored by <a href=""></a> Valid <a href="http://http://jigsaw.w3.org/css-validator/">CSS</a> &amp; <a href="http://validator.w3.org/"> XHTML</a></p></div> </body></html>
+
+change calculator.php so that it uses a constant in lieu of the hard-coded average speed of 65.(as written, the average speed is a "magic number": a value used in a script without explanation.) 
+
+<?php # Script 3.9 - calculator.php #4
+ // This function creates a radio button.
+// The function takes two arguments: the value and the name.
+// The function also makes the button "sticky".
+function create_radio($value, $name = 'gallon_price') {
+
+ // Start the element:
+ echo '<input type="radio" name="' . $name .'" value="' . $value . '"';
+
+ // Check for stickiness:
+ if (isset($_POST[$name]) && ($_POST[$name] == $value)) {
+  echo ' checked="checked"';
+ } 
+
+ // Complete the element:
+ echo " /> $value ";
+ } // End of create_radio() function.
+ $page_title = 'Trip Cost Calculator';
+include ('includes/header.html');
+ // Check for form submission:
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  // Minimal form validation:
+ if (isset($_POST['distance'], $_POST['gallon_price'], $_POST['efficiency']) &&
+  is_numeric($_POST['distance']) && is_numeric($_POST['gallon_price']) && is_numeric($_POST['efficiency']) ) {
+define(speed, 65);
+  // Calculate the results:
+  $gallons = $_POST['distance'] / $_POST['efficiency'];
+  $dollars = $gallons * $_POST['gallon_price'];
+  $hours = $_POST['distance']/speed;
+
+  // Print the results:
+  echo '<h1>Total Estimated Cost</h1>
+ <p>The total cost of driving ' . $_POST['distance'] . ' miles, averaging ' . $_POST['efficiency'] . ' miles per gallon, and paying an average of $' . $_POST['gallon_price'] . ' per gallon, is $' . number_format ($dollars, 2) . '. If you drive at an average of 65 miles per hour, the trip will take approximately ' . number_format($hours, 2) . ' hours.</p>';
+
+ } else { // Invalid submitted values.
+  echo '<h1>Error!</h1>
+  <p class="error">Please enter a valid distance, price per gallon, and fuel efficiency.</p>';
+ }
+
+} // End of main submission IF.
+ // Leave the PHP section and create the HTML form:
+?>
+ <h1>Trip Cost Calculator</h1>
+<form action="calculator.php" method="post">
+ <p>Distance (in miles): <input type="text" name="distance" value="<?php if (isset($_POST['distance'])) echo $_POST['distance']; ?>" /></p>
+ <p>Ave. Price Per Gallon: <span class="input">
+ <?php
+ create_radio('3.00');
+ create_radio('3.50');
+ create_radio('4.00');
+ ?>
+ </span></p>
+ <p>Fuel Efficiency: <select name="efficiency">
+  <option value="10"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '10')) echo ' selected="selected"'; ?>>Terrible</option>
+  <option value="20"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '20')) echo ' selected="selected"'; ?>>Decent</option>
+  <option value="30"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '30')) echo ' selected="selected"'; ?>>Very Good</option>
+  <option value="50"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '50')) echo ' selected="selected"'; ?>>Outstanding</option>
+ </select></p>
+ <p><input type="submit" name="submit" value="Calculate!" /></p>
+</form>
+ <?php include ('includes/footer.html'); ?> 
