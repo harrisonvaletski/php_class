@@ -1,0 +1,198 @@
+Quiz-  Chapters 7 and 8
+
+1.  JOINs are often necessary when related data is spread over multiple tables.
+A. True
+B. False
+
+2   To reference the “id” column of the “users” table (perhaps to avoid ambiguity), you would write _____.
+A. users->id
+B. users.id
+C. id of users
+D. id.users
+
+3.  The order of the tables listed in an INNER JOIN makes no difference.
+A. True
+B. False
+
+4.  An equijoin is one where _____.
+A. an equality comparison is being made
+B. one table is being joined to itself
+C. the values could or could not be equal
+D. All of the above
+E. None of the above
+
+5.  You cannot apply a LIMIT or ORDER BY clause to a JOIN.
+A. True
+B. False
+
+6.  The JOIN conditional ON m.forum_id=f.forum_id can be rewritten as _____.
+A. SAME (forum_id)
+B. EQUALS (forum_id)
+C. USING (forum_id)
+D. ON (forum_id)
+
+7.  The order of the tables listed in an OUTER JOIN makes no difference.
+A. True
+B. False
+
+8.  Which of the following is a type of OUTER JOIN?
+A. LEFT
+B. RIGHT
+C. FULL
+D. All of the above
+E. None of the above
+
+9.  You cannot use an INNER and an OUTER JOIN in the same query.
+A. True
+B. False
+
+10.  Which of the following is not an aggregating function?
+A. AVE()
+B. COUNT()
+C. MIN()
+D. MAX()
+
+11.  To only include unique values, add the _____ keyword to a grouping function.
+A. UNIQUE
+B. DISTINCT
+C. ORIGINAL
+D. NEW
+
+12.  Grouping can be accomplished using an aggregate function and/or the _____ clause.
+A. AGGREGATE
+B. ORDER BY
+C. LIMIT
+D. GROUP BY
+
+13.  A table must use the _____ storage engine in order to make use of FULLTEXT searches.
+A. InnoDB
+B. MyISAM
+C. HEAP
+D. FULLTEXT
+
+14.  Basic FULLTEXT searches will _____.
+A. ignore words shorter than 4 characters
+B. ignore very popular words
+C. not return any results if more than half the records are a match
+D. All of the above
+E. None of the above
+
+15.  FULLTEXT searches in Boolean mode will _____.
+A. ignore words shorter than 4 characters
+B. return results even if more than half the records are a match
+C. not sort the results by relevance
+D. All of the above
+E. None of the above
+
+16.  Which of the following SQL commands cannot be undone in a transaction?
+A. INSERT
+B. UPDATE
+C. CREATE
+D. DELETE FROM table
+
+17.  Which of the following is an example of a hashing function?
+A. SHA1()
+B. AES_ENCRYPT()
+C. PASS()
+D. DES_ENCRYPT()
+
+18.  Which of the following is an example of an encryption function?
+A. SHA1()
+B. AES_ENCRYPT()
+C. PASS()
+D. MD5()
+
+19.  Which of the following is a type of PHP error?
+A. Syntactical
+B. Run-time
+C. Logical
+D. All of the above
+E. None of the above
+
+20.  _____ errors will prevent a PHP script from running.
+A. Syntactical
+B. Run-time
+C. Logical
+D. None of the above
+
+21.  _____ errors only appear during the execution of a script.
+A. Syntactical
+B. Run-time
+C. Logical
+D. None of the above
+
+22.  _____ errors will not be reported by PHP.
+A. Syntactical
+B. Run-time
+C. Logical
+D. None of the above
+
+23.  To run a PHP script in a browser, you do not always have to go through a URL.
+A. True
+B. False
+
+
+
+24.  Using ini_set() to enable display_errors in a PHP script will result in all PHP errors always being shown.
+A. True
+B. False
+
+25.  Enabling display_errors in the PHP configuration file will result in all PHP errors always being shown.
+A. True
+B. False
+
+26.  The _____ level of PHP errors may or may not be indicative of a problem but does not stop the execution of the script.
+A. notices
+B. warnings
+C. errors
+D. None of the above
+
+27.  The _____ level of PHP errors is normally indicative of a problem but does not stop the execution of the script.
+A. notices
+B. warnings
+C. errors
+D. None of the above
+
+28.  The _____ level of PHP errors is indicative of a problem and does stop the execution of the script.
+A. notices
+B. warnings
+C. errors
+D. None of the above
+
+29.  To change the level of error reporting in an individual PHP script, use the _____ function.
+A. display_errors()
+B. show_errors()
+C. error_reporting()
+D. set_error_handler()
+
+30.  During development, scripts should be set on the _____ level of error reporting.
+A. lowest
+B. highest
+C. most terse
+D. public
+
+31.  To have a PHP script use your own custom error handler, provide the name of that error handling function to PHP’s _____ function.
+A. display_errors()
+B. show_errors()
+C. error_reporting()
+D. set_error_handler()
+
+32.  _____ is the error suppression operator.
+A. @
+B. &
+C. >
+D. ~
+
+33.  Which of the following is not a useful HTML debugging step?
+A. Check the HTML source.
+B. Enable display_errors.
+C. Use a validation tool.
+D. Try another browser.
+
+34.  State three  interesting things you have learned in this class. 
+
+	1.
+	2.
+	3.
+
+35.  What do you want to learn more about in your program (software or database)?
