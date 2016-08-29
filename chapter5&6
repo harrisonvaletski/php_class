@@ -1,0 +1,178 @@
+Chapter 5/6 questions
+1. SQL is case-sensitive.
+A. True
+B. False
+
+2. What SQL command is used to select the database with which you want to work?
+A. SELECT
+B. USE
+C. CHOOSE
+D. DATABASE
+
+3.  What SQL command is used to make a new database or database table?
+A. MAKE
+B. CREATE 
+C. BUILD
+D. ADD
+
+4. SQL commands end with a semicolon.
+A. True
+B. False
+
+5. What SQL command is used to add a record to a table?
+A. ADD
+B. MAKE
+C. CREATE
+D. INSERT
+
+6. Which of the following value types should be quoted when used in queries?
+A. Strings
+B. Dates
+C. Times
+D. All of the above
+E. None of the above
+
+7. What SQL command is used to fetch records from a table?
+A. FETCH
+B. GET
+C. SELECT
+D. RETRIEVE
+
+8. The asterisk in the query SELECT * FROM tablename means _____.
+A. the primary key column
+B. every column
+C. every non-null column
+D. the previously requested columns
+
+9.  You can fetch records from a table with the columns in any order.
+A. True
+B. False
+
+10.  Conditionals in a query impact which _____ are returned.
+A. columns
+B. rows
+C. columns and rows
+D. None of the above
+
+11.  By default, SELECT query results are returned in order by primary key.
+A. True
+B. False
+
+12.  By default, ORDER BY sorts results in _____ order.
+A. ascending
+B. descending
+C. primary key
+D. None of the above
+
+13.  Which of the following is syntactically incorrect?
+A. SELECT * FROM tablename LIMIT 4
+B. SELECT * FROM tablename LIMIT 4, 9
+C. SELECT * FROM tablename LIMIT 4 ORDER BY column
+D. SELECT * FROM tablename ORDER BY column LIMIT 4, 9
+
+14.  The _____ command is used to change the values already stored in a table.
+A. ALTER
+B. SELECT
+C. INSERT
+D. UPDATE
+
+
+
+15.  A single record can be removed from a table using _____ and a LIMIT clause or conditional.
+A. DROP
+B. DELETE
+C. TRUNCATE
+D. REMOVE
+
+16.  What MySQL function returns the current date and time?
+A. CURRENT()
+B. NOW()
+C. TIMESTAMP()
+D. GET_NOW()
+
+17. Primary key columns _____.
+A. Must always have a value
+B. Must always have a unique value
+C. Must have a value that never changes
+D. All of the above
+E. None of the above
+
+18.  Primary key columns should almost always have the following properties:
+A. NOT NULL
+B. AUTO_INCREMENT
+C. UNSIGNED
+D. All of the above
+E. None of the above
+
+19.  A foreign key is _____.
+A. in another language
+B. identical to a primary key in a related table
+C. a type of index
+D. All of the above
+E. None of the above
+
+20.  Which of the following is not a relationship type?
+A. one-to-one
+B. one-to-many
+C. one-to-none
+D. many-to-many
+
+
+21.  Your database design should avoid two tables with a _____ relationship.
+A. one-to-one
+B. one-to-many
+C. many-to-many
+D. All of the above
+E. None of the above
+
+22. You should not index columns that _____.
+A. are used in WHERE clauses
+B. are used in JOINs
+C. allow for NULL values
+D. are used in ORDER BY clauses
+
+23.  MySQL supports the _____ index type.
+A. KEY
+B. UNIQUE
+C. FULLTEXT
+D. All of the above
+E. None of the above
+
+24.  You can use different storage engines within the same database.
+A. True
+B. False
+
+25.  The character set used by the database can be different than that used by the PHP script or HTML page.
+A. True
+B. False
+
+26.  The character set can be assigned to _____.
+A. the entire database
+B. each separate table
+C. an individual column
+D. All of the above
+E. None of the above
+
+27.  The two most commonly used storage engines in MySQL are _____.
+A. InnoDB and MyISAM
+B. MyISAM and MySQL
+C. HEAP and InnoDB
+D. InnoDB and UTF8
+
+28.  By default, MySQL stores dates and times using the time zone of _____.
+A. the user
+B. the server
+C. greenwich Mean Time (GMT)
+D. coordinated Universal Time (UTC)
+
+29.  To store a date and time in UTC, invoke the _____ function.
+A. TIMESTAMP()
+B. UTC_TIMESTAMP()
+C. TIMESTAMP_UTC()
+D. CONVERT_TZ()
+30..  In order to use foreign key constraints _____.
+A. both tables must be using the InnoDB storage engine
+B. the primary key table must be using the InnoDB storage engine
+C. the foreign key table must be using the InnoDB storage engine
+D. both tables must be using the MyISAM storage engine
+
