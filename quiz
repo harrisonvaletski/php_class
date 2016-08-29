@@ -1,0 +1,120 @@
+Welcome back from Spring Break
+PHP Quiz 
+
+What are the four components of the LAMP framework?  
+Linux apache mysql and php
+What character must be used to terminate every PHP statement?  
+A semicolon
+What is an escape sequence?    
+It’s a formatting standard used to print and display special characters or data which normally is syntactically sensitive to the code.
+	Name Three:   1. Using a backslash and an asterisk to make an asterisk
+			2. using a backslash and a dollar symbol to display a dollar sign
+			3. use of a backslash and the letter r to represent a carriage return
+
+4.  Name the error (if any) in the following scripts:
+	<?php
+	/* print a line of output /
+	echo ‘Hello’
+	?>
+
+Error:  theres no semicolon at all for that statement
+
+	<?php
+	echo ‘ <p align=”right”> Copyright Me, 2014</p>’;
+	?>
+
+Error: n/a
+
+
+5.  Highlight which of the following variable names are invalid:
+
+a.  $24  
+b.  $IAMHERE
+c.   $_error
+d.   $yA_K
+e.  $^b
+
+
+6.  Write a PHP statement to create a constant value holding the name of your favorite type of doughnut.
+Define(‘doughnut’,’raspberry-filled’);
+
+7.  Write a simple script to initialize a variable and then increment its value by 3. 
+<?php $number= 1; $number=$number+($number*3); ?>
+
+8.  What are the values of $x and ABC at the end of the following PHP script?
+
+<?php
+$x = 89;
+define (‘ABC’, $x + 1);
+$x += ABC;
+?>
+At the end $x =179 and ABC = 90
+9.  What is the likely output of the following PHP script? (Use the PHP documentation to discover what the gettype does if you don’t already know)
+
+<?php
+define (‘NUM’, ‘7’);
+$a = NUM
+echo gettype ($a);
+?>
+This script will just display the type of a variable which contains the same value of a constant defined as the number seven which is a number, so I think it will say ‘integer’ or something
+
+10.  Write a PHP script that accepts a temperature value in Celsius I through a Web form and converts it to the Fahrenheit (F) scale.  I need form code and the PHP code. The conversion formula is:
+F = (9/5) * C + 32
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN” http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd><html xmlns=”http://www.w3.org/1999/xhtml”><head><title><?php echo $page_title; ?></title><link rel=”stylesheet” href=”includes/style.css” type=”text/css” media=”screen”/><meta http-equiv=”content-type”content=”text/html; charset=utf-8” /></head><body>
+<div id=”header”><h1>your website</h1><h2>catchy slogan</h2></div><div id =”navigation”<ul><li><a href=”index.php”>Home page</a></li><li><a href=”index.php”>Home page</a></li><li><a href=”index.php”>Home page</a></li><li><a href=”index.php”>Home page</a></li></ul></div><div id=”content”><!—Start of the Page-specific content. -- > <! – script 3.2 –header.html -- >
+
+
+
+<?php 
+//get the value from the form after hit the enter button 
+if($_POST){ 
+//used method="post" so have to use $_POST 
+//action="" -> so the same page 
+//name="fahrenheit" -> so $_POST['fahrenheit'] 
+$fahrenheit = $_POST['fahrenheit']; 
+//calculate the formula 
+$celsius = ($fahrenheit - 32)*5/9; 
+} 
+?> 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd><html xmlns="http://www.w3.org/1999/xhtml"><html> <head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>Convert Fahrenheit to Celsius in PHP</title> 
+</head> <body> <form action="" method="post"> 
+Fahrenheit: <input type="text" name="fahrenheit" /><input type="submit" value="Submit"><br /> 
+<?php 
+//show the celsius after hit the enter button and the calculation 
+if(isset($celsius)){ 
+echo "Celsius = ".$celsius; } ?> </form </body> </html>
+<! – script 3.3 – footer.html -- >
+<! - - end of the page specific content. - -> </div><div id=”footer”><p>Copyright &copy; <a href=”#”> Plain and simple</a> 2014 | Designed by <a href=”http://hvaletski.wordpress.com/”>Harrison Valetski</a> sponsored by <a href=””></a> Valid <a href=”http://http://jigsaw.w3.org/css-validator/”>CSS</a> &amp; <a href=”http://validator.w3.org/”> XHTML</a></p></div>
+ </body></html>
+
+11.  Using a while loop, write a program that prints a multiplication table for the number 8. 
+<?php echo"<tableborder=1>";echo"<table>\n"; echo"<tr>\n"; $a= 1;$b= 1;while ($a <= 9 && $b <= 10){$calc = $a * $b; echo "  <td>$calc</td>\n";  $a++; if ($a == 9){echo "  </tr>\n"; if ($b < 10)echo "   </tr>\n"; $a = 1; $b++;}}echo "</table>";?>
+
+12.  Rewrite number 11 using a for loop instead. 
+<?php for($i=1; $i<=8; $i++){  print("\n"); for($a=1; $a<=10; $a++){ $b = $a * $i; print(" $b\n"); }print("\n"); } ?>
+
+13. What are the two types of arrays? How do they differ?
+indexed, which use numbers as the keys, and associative which use strings as the keys
+
+14.  Write a program that reads an array of numbers and returns a list of all those numbers < 15. (try using the ternary operator. We discussed this in class. See page 317 in book if you don’t remember.)
+<php
+$array = array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14);
+
+/*
+$arrlength=count($array); for($x=0;$x<$arrlength;$x++) {
+echo $array[$x];
+echo "<br>";
+}
+*/
+echo (isset($array)) ? print_r($array) : 'empty';
+?>
